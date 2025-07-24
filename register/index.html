@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTCR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/register/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Anton+SC&family=Bangers&family=Bebas+Neue&family=Cal+Sans&family=Days+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Staatliches&family=Unbounded:wght@200..900&family=Varela&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bangers&family=Bungee&family=Caveat:wght@400..700&family=Protest+Riot&family=Righteous&family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="d-flex align-items-center py-4 px-5">
+
+        <h1 class="fw-bold">BTCR</h1>
+        <nav class=" ">
+            <a href="/index.html">Home</a>
+            <a href="">Business</a>
+            <a href="">NRI</a>
+            <a href="">Investments</a>
+            <a href="">Support</a>
+        </nav>
+        <button class="btn  px-4" id="b1">Contact</button>
+        <a href="/login/login.html"><button class="btn ms-2 px-4" id="b1">Login</button></a>
+        
+       <select name="" id="" class=" ms-4 rounded p-2  text-light border border-1 px-4 ">
+        <option value="">Select Language</option>
+        <option value="" class="">English</option>
+        <option value="">malayalam</option>
+       </select>
+
+    
+
+        
+    </header>
+<body>
+
+
+    <div class="row px-5 mt-5 mb-5">
+        <div class="col-3"></div>
+         <div class="col-6 bg-light text-center rounded p-5"><h2 class="bg-transparent  mb-5">REGISTRATION</h2>
+            <input type="text" name="" id="ru" placeholder="Username" class=" p form-control w-75 mx-auto mt-4 p-2 px-2" >
+            <input type="text" name="" id="rac" placeholder="Enter a AC no" class=" p form-control w-75 mx-auto mt-4 p-2 px-2" >
+        <input type="email" name="" id="re" placeholder="Enter a valid Email" class=" p form-control w-75 mx-auto mt-4 p-2 px-2" >
+
+        <input type="password" name="" id="rp" placeholder="Enter a Password  ( Atleast 8 Characters )" class=" p form-control w-75 mx-auto mt-4 p-2 px-2" minlength="8" >
+        <button class="mt-5 btn text-light w-75 rounded" id="reg" style="background-color: black;" onclick="register()">Signup</button>
+
+       
+    </div>
+        <div class="col-3"></div>
+       
+    </div>
+
+
+
+
+    <script>
+        function register(){
+
+           
+            
+            
+            const pasvalid=rp.value.length>=8;
+
+
+          if(ru.value && re.value && rp.value && pasvalid && rac.value in localStorage)  {
+            alert("This Account Number already exists")
+          }
+
+
+  else if(ru.value && re.value && rp.value && pasvalid){
+
+            let ac=rac.value
+            console.log(ac);
+            
+
+                let usekey=ru.value;
+            console.log(usekey);
+
+            let regemail=re.value
+            console.log(regemail);
+
+            let regpass=rp.value;
+            console.log(regpass);
+
+            
+
+
+            let person={
+
+                id:usekey,
+                email:regemail,
+                Pass:regpass,
+                balance:2000
+                
+            }
+
+            localStorage.setItem(ac,JSON.stringify(person)) 
+            alert(`Hi ${usekey} , welcome to BTCR family`) // saving details inside the local storage
+
+            window.location.href='../login/login.html'
+
+           
+
+            
+            }
+
+      
+        else{
+
+            switch(true){
+
+                case(ru.value && re.value && rp.value && !pasvalid):
+                alert("Your Password must be atleast 8 characters")
+                break;
+
+                case(!ru.value || !rac.value || !re.value || !rp.value):
+                alert("Please Fill all the Details")
+
+
+                
+            }
+        }
+
+
+        
+
+            }
+    
+
+
+
+
+    </script>
+    
+</body>
+<footer style="height: 15em;" class="bg-light d-flex mt-5">
+  <div class="fs align-items-center justify-content-center" style="width: 20em;">
+    <ul>
+
+      <li style="font-size: 1.4em;">Quick links</li>
+      <li>FAQS</li>
+      <li>Career</li>
+      <li>Branch Location</li>
+    </ul>
+  </div>
+  <div class="fs align-items-center justify-content-center" style="width: 20em;">
+     <ul>
+
+      <li style="font-size: 1.4em;">Legal</li>
+      <li>Privacy Policy</li>
+      <li>Terms & service</li>
+      <li>Regulaotory Disclosures</li>
+    </ul>
+  </div>
+  <div class="fs align-items-center justify-content-center" style="width: 20em;">
+    <ul>
+      <li  style="font-size: 1.4em;">Resources</li>
+      <li>Blog</li>
+      <li>Help Center</li>
+      <li>Contact Support</li>
+    </ul>
+  </div>
+  <div class="fs flex-column align-items-center justify-content-center bg-transparent" style="width: 40em;">
+    <p class="bg-transparent">Newsletter</p>
+   <div class="d-flex  gap-4 bg-transparent" style="width: 30em; height: 5em; justify-content: center ; align-items: center;">
+    <input type="text" name="" id="" class="p-2 w-75 bg-transparent"><button class="p-2 px-2" style="background-color: black; color: white;">submit</button>
+   </div>
+  </div>
+</footer>
+<div class="l d-flex align-itemscenter justify-content-center text-light gap-2  py-4" style="height: 2em;font-size: 0.6em;">
+
+  <i class="fa-solid fa-copyright mt-1"></i><p>BTCR . All Rights Reserved</p>
+</div>
+</html>

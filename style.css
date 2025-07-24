@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:  black;
+    font-family: Unbounded, sans-serif;
+}
+header{
+    color: white;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+background-color:  black;
+}
+select{
+    font-size: 0.6em;
+}
+button{
+    background-color: gray;
+    font-size: 0.8em;
+}
+#b1{
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+     background-color:  rgb(47, 40, 40);
+}
+
+#b1:hover{
+    background-color:gray;
+    transition: 0.3s;
+}
+
+header h1{
+    font-size: 4em;
+}
+nav a{
+    text-decoration: none;
+   color: white;
+    font-weight: 500;
+    font-weight: bold;
+    position: relative;
+    font-size: 0.8em;
+    margin-left: 1.5em;
+   
+
+}
+nav a::after{
+    position:absolute;
+    height: 0.2em;
+    background-color: white;
+    width: 0;
+    content: '';
+    left: 0;
+    bottom: -0.5em;
+}
+nav a:hover::after{
+    transition: 0.3s;
+    width: 100%;
+}
+nav{
+    margin-left: 5em;
+     font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+   margin-right: 1em;
+  
+  width: 30em;
+  
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.btn-group a{
+    cursor: pointer;
+
+}
+select {
+  -webkit-appearance: none;  
+  -moz-appearance: none;     
+  appearance: none;         
+  background: none;        
+  padding-right: 20px;       
+}
+
+.carousel-item img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.f img{
+    object-fit: cover;
+}
+.f h1{
+    font-size: 5.5em;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+}
+.w{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.w p{
+    font-size: 0.5em;
+}
+.o p{
+    font-size: 0.8em;
+}
+.o button{
+    font-size: 0.7em;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: 500;
+}
+input{
+    font-size: 0.8em;
+}
+.w2s{
+    width: 8em;
+    height: 8em;
+    border-radius: 5px;
+    background-size: cover;
+    position: relative;
+  
+}
+.w2{
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.w2s img{
+      object-fit: cover;
+}
+.ov{
+position: absolute;
+display: flex;
+justify-content: center;
+background-color: rgba(0, 0, 0, 0.5);
+opacity: 0;
+transition: 0.3s;
+height: 100%;
+width: 100%;
+align-items: center;
+font-size: 0.5em;
+color: white;
+cursor: pointer;
+}
+.ov:hover{
+    opacity: 1;
+    z-index: 2;
+    
+}
+
+.t1s{
+    width: 15em;
+    height: 12em;
+    align-items: flex-start;
+     
+    color:black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.t1s i{
+    font-size: 2em;
+    padding: 0.5em;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    
+    
+}
+.t1s i:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.t2s{
+    width: 18em;
+    height: 8em;
+    
+    display: flex;
+    border-radius: 10px;
+    color:black;
+    background-color: white;
+    align-items: center;
+    border: 2px solid white;
+justify-content: center;}
+
+.t2s i{
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: 50%;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+   .tex{
+    background-color: white;
+    color:black;
+    font-size: 0.8em;
+   }
+   .tex p{
+    background-color: white;
+   }
+   .tex span{
+    font-size: 0.6em;
+    background-color: white;
+    color: black;
+   }
+   .t2s i:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    border: 2px solid black;
+   }
+   .ds{
+    width: 25em;
+    position: relative;
+    background-size: cover;
+
+   }
+   .ds:hover{
+    transform: scale(1.01);
+    transition: 0.3s;
+   }
+   .ovr{
+    background: transparent;
+ background-color: rgba(0, 0, 0, 0.5);
+ position: absolute;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ flex-direction: column;
+   }
+   .v{
+    display: flex;
+    flex-direction: column;
+   }
+   p{
+    background-color: transparent;
+   }
+   .v input{
+    border: 2px solid black;
+   }
+   .bs{
+    width: 30em;
+    height: 8em;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: white;
+   }
+   .btcr h2{
+    background: transparent;
+   }
+.fs{
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+}
+li{
+    list-style-type: none;
+    margin-top: 1em;
+}
+ul , li{
+    background: transparent;
+    font-size: 0.8em;
+}
+
+
+
+
+.p{
+    font-size: 0.4em;
+}
